@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+ host1:
+   image: jgiannuzzi/postgres-bdr
+   restart: always
+   ports:
+     - 5433:5432
+   volumes:
+     - /data:/var/lib/postgresql/data2
+   environment:
+     POSTGRES_PASSWORD: 123
+
+ host2:
+   image: jgiannuzzi/postgres-bdr
+   restart: always
+   ports:
+     - 5432:5432
+   volumes:
+     - /data:/var/lib/postgresql/data2
+   environment:
+     POSTGRES_PASSWORD: 123
+
+ host3:
+   image: jgiannuzzi/postgres-bdr
+   restart: always
+   ports:
+     - 5432:5432
+   volumes:
+     - /data:/var/lib/postgresql/data2
+   environment:
+     POSTGRES_PASSWORD: 123
